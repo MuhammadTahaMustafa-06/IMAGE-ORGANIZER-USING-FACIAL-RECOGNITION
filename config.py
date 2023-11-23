@@ -1,0 +1,2 @@
+DEBUG = True
+SECRET_KEY = '$Urti1122'

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Recognition</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="container">
+        <div id="image-preview">
+            <img id="preview-img" src="" alt="Preview">
+        </div>
+        <input type="file" id="upload-input" accept="image/*">
+        <button id="upload-btn" aria-label="Upload Image">Upload Image</button>
+        <button id="capture-btn" aria-label="Capture Image">Capture Image</button>
+        <div id="loading">
+            <div id="progress-bar"></div>
+            Processing... Please wait.
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
