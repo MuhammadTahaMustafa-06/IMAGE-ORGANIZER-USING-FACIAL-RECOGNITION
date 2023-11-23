@@ -4,21 +4,30 @@
     <meta charset="UTF-8">
     <title>Image Recognition</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
     <div id="container">
-        <div id="image-preview">
-            <img id="preview-img" src="" alt="Preview">
+        <div id="image-preview" class="position-relative">
+            <!-- Empty image with user icon placeholder -->
+            <img id="preview-img" src="https://cdn.vectorstock.com/i/preview-1x/90/36/add-user-icon-design-blank-avatar-placeholder-vector-34269036.webp" alt="User Icon" class="rounded-circle">
+            <!-- Spinner -->
+            <div class="spinner-border text-primary position-absolute top-50 start-50 translate-middle" id="loading" role="status" style="display: none;">
+                <span class="visually-hidden">Loading...</span>
+            </div>
         </div>
         <input type="file" id="upload-input" accept="image/*">
-        <button id="upload-btn" aria-label="Upload Image">Upload Image</button>
-        <button id="capture-btn" aria-label="Capture Image">Capture Image</button>
-        <div id="loading">
-            <div id="progress-bar"></div>
-            Processing... Please wait.
-        </div>
+        <button id="remove-btn" class="btn btn-success"  >Remove Image</button>
+        <button id="submit-btn" class="btn btn-primary" aria-label="Upload Image">Submit Image</button>
+        <button id="capture-btn" class="btn btn-success" aria-label="Capture Image">Capture Image</button>
     </div>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-</body>
-</html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+
+
+
+
+
+        
